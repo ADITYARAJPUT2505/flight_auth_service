@@ -1,0 +1,13 @@
+# Authentiation -> it is a process using which we can uniquely idntify user on our application  , this perocesstells us about who the user is. the general signup/login/logout flow is used for authenticate a user.
+
+#Authorisation -> it is process using which we can identify the capabilities of a use ,  ie what a user can do on  our application. eg->like buyer or seller
+
+#How to authenticate -> 
+1. mobile no.
+2. omniauth-> gmail/fb/github(third party  service auth)
+3. token based auth
+
+#Token Based Authentication :-
+(jwt token -> json web token)
+to generate the jwt toke, we actually use the client credentials only.
+     user name + jser id -> generate jwt ->unique hash->usoing this token we can retrive the original information back(by which we made the token)
