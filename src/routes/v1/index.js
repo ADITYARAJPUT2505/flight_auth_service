@@ -1,10 +1,9 @@
 const express = require("express");
-const { create } = require("../../controller/user_controller");
-
 const router = express.Router();
+const UserController = require("../../controller/user_controller");
 
-router.post("/signup", create);
+const { AuthRequestValidator } = require("../../middlewares/index");
 
-//router.delete("/signup", UserController.destroy);
-
+router.post("/signup", UserController.create);
+router.post("/signin", UserController.signIn);
 module.exports = router;

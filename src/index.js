@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const apiRoutes = require("./routes/index");
 const prepareAndStartService = () => {
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: true }));
   app.listen(3001, async () => {
     console.log("server started at :3001");
 
